@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certificate of Achievement</title>
+    <style>
+      body {
+        font-family: "Times New Roman", Times, serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .certificate-container {
+        background-color: white;
+        width: 850px;
+        padding: 50px;
+        border: 12px solid rgb(118, 232, 255);
+        text-align: center;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+      .certificate-header {
+        color: rgb(118, 232, 255);
+
+        margin-bottom: 30px;
+        font-size: 36px;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+      .certificate-subtitle {
+        font-size: 20px;
+        margin-bottom: 50px;
+      }
+      .certificate-recipient {
+        font-size: 28px;
+        font-weight: bold;
+        margin: 30px 0;
+      }
+      .certificate-text {
+        font-size: 18px;
+        margin-bottom: 40px;
+      }
+      .details {
+        text-align: left;
+        margin-bottom: 30px;
+        font-size: 18px;
+      }
+      .details p {
+        margin: 8px 0;
+      }
+      .signature-section {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+      }
+      .date-time,
+      .signature {
+        text-align: center;
+        font-size: 18px;
+      }
+      .date-time {
+        width: 33%;
+        text-align: left;
+      }
+      .signature {
+        width: 33%;
+        text-align: center;
+      }
+      .signature img {
+        width: 150px;
+      }
+      .time-section {
+        width: 33%;
+        text-align: right;
+      }
+      .certificate-logo {
+        margin-bottom: 30px;
+      }
+      .certificate-logo img {
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="certificate-container">
+      <!-- Add an image/logo at the top of the certificate -->
+      <div class="certificate-logo">
+        <img src="<%=logo%>" alt="Logo" />
+      </div>
+
+      <div class="certificate-header">
+        <%= heading%>
+      </div>
+      <div class="certificate-subtitle">
+        <%= subHeading%>
+      </div>
+      <div class="certificate-recipient">
+        <%= name%>
+      </div>
+      <div class="certificate-text">
+        <%= para1%>
+      </div>
+
+      <div class="details">
+        <p><strong>Date of Birth:</strong> <%=dob%></p>
+        <p><strong>Gender:</strong> <%=gender%></p>
+        <p><strong>Blood Group:</strong> <%=blood_gp%></p>
+      </div>
+
+      <!-- Signature, Date-Time, and Signature aligned horizontally -->
+      <div class="signature-section">
+        <div class="date-time">
+          <p><%=date_time%></p>
+          <p>_______________________</p>
+          <p>Date</p>
+        </div>
+        <div class="signature">
+          <!-- Add a signature image in the middle -->
+          <img src="<%=logo%>" alt="Signature" />
+          <p>Signature</p>
+        </div>
+        <div class="time-section">
+          <p><%=date_time%></p>
+          <p>_______________________</p>
+          <p>Time</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
